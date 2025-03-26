@@ -1,35 +1,16 @@
 nav {
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 80px;
     top: 0;
-    font-size: 30px;
-    background-color: white;
+    font-size: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: right;
-}
-
-article {
-    background-color: white;
-    border-radius: 50px;
-    width: 100%;
-    height: calc(100% - 60%);
-}
-
-article h1 {
-    text-align: center;
-    font-size: 50px;
-    color: black;
-    margin-bottom: 0;
-    padding: 20px;
-}
-
-article p {
-    font-size: 30px;
-    color: black;
-    margin-top: 0;
-    padding: 20px;
-    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 20px;
 }
 
 nav ul {
@@ -38,25 +19,49 @@ nav ul {
     margin: 0;
     padding: 0;
     align-items: center;
-    height: 100%;
+    gap: 20px;
 }
 
 nav ul li {
-    list-style: none;
-    margin-left: 100px;
-    right: 0;
-    width: calc(100% / 1);
+    margin: 0;
 }
 
-nav ul li div {
-    display: flex;
-    position: absolute; /* Cambiado de relative a absolute */
-    justify-content: flex-start; /* Asegura que el contenido esté alineado a la izquierda */
-    top: 0; /* Alinea el div a la parte superior */
-    left: 0; /* Alinea el div a la izquierda */
-    margin-left: 20px; 
-    margin-top: 8px;
-    padding: 0; /* Elimina cualquier padding */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+    color: #007BFF;
+}
+
+article {
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto 20px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+article h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+article p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 * {
@@ -66,15 +71,15 @@ nav ul li div {
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    color: white;
-    background-color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
